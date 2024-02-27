@@ -27,7 +27,7 @@ client.send_message(receiver, message="123")
 while True:
     wait_to = utils.get_timestamp_for_message_sending()
     message = utils.get_message(random.randint(0, 100))
-    print("waiting to ", wait_to, "with message:", message)
+    print("waiting to ", wait_to, "with message:", message.encode('utf-8', 'replace').decode('utf-8'))
     while True:
         if datetime.now() > wait_to:
             break
