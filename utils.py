@@ -46,7 +46,7 @@ def compute_remaining_time():
 
 
 def get_message(num: int) -> str:
-    f = open("messages.txt")
+    f = open("messages.txt", 'r', encoding='utf-8')
     messages = f.read().split("\n")
     f.close()
     return messages[num]

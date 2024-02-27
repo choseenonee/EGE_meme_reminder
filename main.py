@@ -31,4 +31,5 @@ while True:
     while True:
         if datetime.now() > wait_to:
             break
-    client.send_message(receiver, message=message.replace("[оставшееся время]", utils.compute_remaining_time()))
+    message = message.replace("[оставшееся время]", utils.compute_remaining_time())
+    client.send_message(receiver, message=message)
